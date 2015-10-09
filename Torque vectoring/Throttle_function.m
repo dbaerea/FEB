@@ -1,4 +1,4 @@
-function [ output_args ] = Throttle_function( input_args )
+function [ output_args ] = Throttle_function( TS )
 %Regen_on_throttle
 %   Function for calculating the difference between two measurements of the
 %   throttle sensor and then comparing that value with a preset value for
@@ -13,7 +13,7 @@ THR_R = 50;   %Threshold value
 %one and then (only if its lower than the previous one) compared with the
 %preset threshold value for when regen should activate
 while(1)
-    TS1= input_args;
+    TS1= TS;
     if TS1 > TS2
         then accelerate
     else
