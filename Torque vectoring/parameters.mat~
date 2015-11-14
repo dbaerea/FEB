@@ -1,0 +1,27 @@
+%File met alle voertuigparameters.
+
+W       200
+L       1525
+Lf      780
+Lr      745
+Tf      1200
+Tr      1200
+g       9.81
+Ksf     12153
+Ksr     14563
+Krf_a   183.26
+Krr_a   325.31
+Kwf     veercte band vooraan
+Kwr     veercte band achteraan
+Hrcf    32
+Hrcr    41
+Hurcf   hoogte rolcentrum onafgeveerde massa voor
+Hurcr   hoogte rolcentrum onafgeveerde massa achter
+H       273.5
+D       afstand hoogte ZP tot rol as
+LF      -150
+LR      110
+Rm      rol moment 
+Reff_r  bandenstraal effectief
+Gr      gear ratio
+Sr      halve 
