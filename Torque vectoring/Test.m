@@ -3,37 +3,41 @@ function [Trl_max,Trr_max,Wfl,Wfr,Wrl,Wrr] = Test(~,~,~)
 % door berekening van de normaalkrachten op de wielen.
 
 % Parameters
-M       =265;
-L       =1525;
-Lf      =780;
-Lr      =745;
-Tf      =1200;
-Tr      =1200;
-g       =9.81;
-Ksf     =12153;
-Ksr     =14563;
-Krf_a	=183.26;
-Krr_a	=325.31;
-Kwf     =0;
-Kwr     =0;
-Hrcf	=32;
-Hrcr	=41;
-Hurcf	=0;
-Hurcr	=0;
-H       =273.5;
-D       =0;
-LF      =-150;
-LR      =110;
-Rm      =0;
-Reff_r	=0;
-Gr      =10.32;
-Sr      =600;
-Tmax	=38.5;
-Cte     =0;
-ax      =0;
-ay      =0;
-Mu_f    =8.5;
-Mu_r    =8.5;
+M       =265;               %Massa wagen + driver
+L       =1.525;             %Totale lengte tussen beide assen
+Lf      =0.780;             %Lengte ZWP tot vooras
+Lr      =0.745;             %Lengte ZWP tot achteras
+Tf      =1.200;             %Trackbreedte vooraan
+Tr      =1.200;             %Trackbreedte achteraan
+g       =9.81;              %Valversnelling
+Ksf     =12153;             %Veerstijfheid vooraan
+Ksr     =14563;             %Veerstijfheid achteraan
+Krf_a	=183.26;            %Stijfheid anti-rollbar vooraan
+Krr_a	=325.31;            %Stijfheid anti-rollbar achteraan
+Kwf     =0;                 %
+Kwr     =0;                 %
+Hrcf	=0.032;             %Hoogte rolcentrum vooraan
+Hrcr	=0.041;             %Hoogte rolcentrum achteraan
+Hurcf	=0;                 %Hoogte onafgeveerde massa vooraan
+Hurcr	=0;                 %Hoogte onafgeveerde massa achteraan
+H       =0.2735;            %Hoogte ZWP
+D       =0.2369;            %Afstand ZWP tot rol-as
+Rm      =0;                 %Rolmoment
+Reff	=0;                 %Bandenstraal
+Gr      =10.32;             %Overbrengingsverhouding gearbox
+Sr      =0.600;             %Halve trackbreedte
+Tmax	=38.5;              %Maximumkoppel per motor
+Cte     =0;                 %Constante voor verhouding Lineaire programmatiemethoden
+ax      =0;                 %constante versnelling voor testen code
+ay      =0;                 %constante versnelling voor testen code
+Mu_f    =8.5;               %Onafgeveerde massa vooraan
+Mu_r    =8.5;               %Onafgeveerde massa achteraan
+R1      =0;                 %Afstand van zwaartepunt naar yaw-rate in de x-richting 
+R2      =0;                 %Afstand van zwaartepunt naar yaw-rate in de y-richting
+R4_x    =0;                 %De afstand van het linkervoorwiel tot het zwaartepunt in de x-richting
+R4_y    =0;                 %De afstand van het linkervoorwiel tot het zwaartepunt in de y-richting
+Vzwp    =0;
+
 
 %Wielbelastingen
 
@@ -72,6 +76,9 @@ Wx_rl = (H/(2*L))*M*ax;
 Wx_rr = Wx_rl;
 
 %Aerodynamische wielbelasting
+LF = -0.0232*(Vzwp)^2 + 0.0299*Vzwp + 1.9329;
+LR = -0.0232*(Vzwp)^2 + 0.0299*Vzwp + 1.9329;
+
 Wa_fl = (-LF/(2*L))+((Ksf/(Ksf+Ksr))*(Rm/Tf));
 Wa_fr = (-LF/(2*L))-((Ksf/(Ksf+Ksr))*(Rm/Tf));
 Wa_rl = (-LR/(2*L))+((Ksr/(Ksf+Ksr))*(Rm/Tr));
