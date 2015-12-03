@@ -47,8 +47,8 @@ Ws_fr = Ws_fl;
 Ws_rl = (Lf/(2*L))*M*g;
 Ws_rr = Ws_rl;
 
-Ms_f = (Ws_fl + Ws_fr)/g;                       %Afgeveerde massa op vooras
-Ms_r = (Ws_rl + Ws_rr)/g;                       %Afgeveerde massa op achteras
+Ms_f = (Ws_fl + Ws_fr)/g - Mu_f;                       %Afgeveerde massa op vooras
+Ms_r = (Ws_rl + Ws_rr)/g - Mu_r;                       %Afgeveerde massa op achteras
 
 
 %Laterale wielbelasting (door rollen van de wagen)
@@ -76,8 +76,8 @@ Wx_rl = (H/(2*L))*M*ax;
 Wx_rr = Wx_rl;
 
 %Aerodynamische wielbelasting
-LF = -0.0232*(Vzwp)^2 + 0.0299*Vzwp + 1.9329;
-LR = -0.0232*(Vzwp)^2 + 0.0299*Vzwp + 1.9329;
+LF = -0.0237*(Vzwp)^2 + 0.0958*Vzwp;
+LR = -0.0237*(Vzwp)^2 + 0.0958*Vzwp;
 
 Wa_fl = (-LF/(2*L))+((Ksf/(Ksf+Ksr))*(Rm/Tf));
 Wa_fr = (-LF/(2*L))-((Ksf/(Ksf+Ksr))*(Rm/Tf));
