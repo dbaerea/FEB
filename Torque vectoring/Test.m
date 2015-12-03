@@ -22,7 +22,7 @@ Hurcf	=0;                 %Hoogte onafgeveerde massa vooraan
 Hurcr	=0;                 %Hoogte onafgeveerde massa achteraan
 H       =0.2735;            %Hoogte ZWP
 D       =0.2369;            %Afstand ZWP tot rol-as
-Rm      =0;                 %Rolmoment
+Rm      =576.35;            %Rolmoment
 Reff	=0;                 %Bandenstraal
 Gr      =10.32;             %Overbrengingsverhouding gearbox
 Sr      =0.600;             %Halve trackbreedte
@@ -36,7 +36,7 @@ R1      =0;                 %Afstand van zwaartepunt naar yaw-rate in de x-richt
 R2      =0;                 %Afstand van zwaartepunt naar yaw-rate in de y-richting
 R4_x    =0;                 %De afstand van het linkervoorwiel tot het zwaartepunt in de x-richting
 R4_y    =0;                 %De afstand van het linkervoorwiel tot het zwaartepunt in de y-richting
-Vzwp    =0;
+Vzwp    =40;                %constante snelheid voor testen code
 
 
 %Wielbelastingen
@@ -79,10 +79,10 @@ Wx_rr = Wx_rl;
 LF = -0.0237*(Vzwp)^2 + 0.0958*Vzwp;
 LR = -0.0237*(Vzwp)^2 + 0.0958*Vzwp;
 
-Wa_fl = (-LF/(2*L))+((Ksf/(Ksf+Ksr))*(Rm/Tf));
-Wa_fr = (-LF/(2*L))-((Ksf/(Ksf+Ksr))*(Rm/Tf));
-Wa_rl = (-LR/(2*L))+((Ksr/(Ksf+Ksr))*(Rm/Tr));
-Wa_rr = (-LR/(2*L))-((Ksr/(Ksf+Ksr))*(Rm/Tr));
+Wa_fl = (-LF/(2))  %+((Ksf/(Ksf+Ksr))*(Rm/Tf));
+Wa_fr = (-LF/(2))  %-((Ksf/(Ksf+Ksr))*(Rm/Tf));
+Wa_rl = (-LR/(2))  %+((Ksr/(Ksf+Ksr))*(Rm/Tr));
+Wa_rr = (-LR/(2))  %-((Ksr/(Ksf+Ksr))*(Rm/Tr));
 
 %anti-roll bar wielbelasting
 Wab_fl = (Krf_a/((Krf_a+((Kwf*(Tf)^2)/2)))*Wy_fl);
