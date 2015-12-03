@@ -48,7 +48,6 @@ Ms_r = (Ws_rl + Ws_rr)/g;                       %Afgeveerde massa op achteras
 
 
 %Laterale wielbelasting (door rollen van de wagen)
-
 FfsM = ((Ksf*M*ay*D)/(Tf*((Ksf+Ksr)-(M*g*D))));    %Kracht door rolmoment
 FrsM = ((Ksr*M*ay*D)/(Tr*((Ksf+Ksr)-(M*g*D))));
 
