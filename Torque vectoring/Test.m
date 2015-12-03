@@ -32,8 +32,8 @@ Tmax	=38.5;
 Cte     =0;
 ax      =0;
 ay      =0;
-Mu_f    =17;
-Mu_r    =17;
+Mu_f    =8.5;
+Mu_r    =8.5;
 
 %Wielbelastingen
 
