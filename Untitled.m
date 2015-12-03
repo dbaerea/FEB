@@ -1,0 +1,1 @@
+unction Yaw_ref = pre_processor(parameters,Vzwp,stuurhoek,mu_max,Fy_fl,Fy_fr,Fy_rl,Fy_rr,alfa_fl,alfa_fr,alfa_rl,alfa_rr)
