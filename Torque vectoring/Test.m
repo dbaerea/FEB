@@ -32,7 +32,7 @@ R1      =0;                 %Afstand van zwaartepunt naar yaw-rate in de x-richt
 R2      =0;                 %Afstand van zwaartepunt naar yaw-rate in de y-richting
 R4_x    =0;                 %De afstand van het linkervoorwiel tot het zwaartepunt in de x-richting
 R4_y    =0;                 %De afstand van het linkervoorwiel tot het zwaartepunt in de y-richting
-Vzwp    =120;                %constante snelheid voor testen code
+Vzwp    =0;                 %constante snelheid voor testen code
 mu_max  =0.9;               %maximale wrijvingsconstante voor testen code
 
 
