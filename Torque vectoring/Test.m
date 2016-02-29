@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function [Trl_max,Trr_max,Wfl,Wfr,Wrl,Wrr] = Test(~,~,~)
 % Berekening van de maximale torques die men kan toepassen op de wielen
 % door berekening van de normaalkrachten op de wielen.
