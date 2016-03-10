@@ -149,10 +149,10 @@ fval
 
 %%
 %Effectieve torques naar motordrives
-Trl_1 = x(2)
-Trl_2 = x_2(2)
-Trr_1 = x(1)
-Trr_2 = x_2(1)
+Trl_1 = x(2,1)
+Trl_2 = x_2(2,1)
+Trr_1 = x(1,1)
+Trr_2 = x_2(1,1)
 
 Trl = Trl_1*Cte + Trl_2*(1-Cte)
 Trr = Trr_1*Cte + Trr_2*(1-Cte)
