@@ -1,4 +1,3 @@
-clear;
 %Deze blok staat in voor het berekenen van de te leveren torque per wiel
 %aan de hand van twee lineaire doelen. Het eerste doel is het netto moment
 %rond het zwaartepunt optimaliseren. Het tweede doel is de torque die wordt
@@ -101,7 +100,10 @@ f([Trr_1 Trl_1 e]) = [-1 -1 0];
 
 %Optimalisatie
 x = linprog(f,A,b,Aeq,beq,lb,ub);
-
+for i = 1:N
+  fprintf('%12.2f \t%s\n',x(i),variables1{i}) 
+end
+fval
 
 
 %%
@@ -140,11 +142,11 @@ f_2 = zeros(size(variables2));
 f_2([Trr_1 Trl_1]) = [-1 -1];
 
 %Optimalisatie
-[x_2 fval] = linprog(f_2,A_2,b_2,Aeq_2,beq_2,lb_2,ub_2);
+[x_2 fval_2] = linprog(f_2,A_2,b_2,Aeq_2,beq_2,lb_2,ub_2);
 for i = 1:N
   fprintf('%12.2f \t%s\n',x_2(i),variables2{i}) 
 end
-fval
+fval_2
 
 
 %%
